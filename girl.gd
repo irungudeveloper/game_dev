@@ -5,8 +5,8 @@ extends KinematicBody2D
 var girlVelocity = Vector2(0,0) 
 var jump_count = 0
 const MAX_JUMP_COUNT = 1
-const SPEED = 180
-const JUMPFORCE = -1000 
+const SPEED = 320
+const JUMPFORCE = -900 
 const GRAVITY = 35
 
 func jump():
@@ -14,13 +14,13 @@ func jump():
 
 func move_right():
 	girlVelocity.x = SPEED
-	$Sprite.play("walk")
-	$Sprite.flip_h = false
-
+	$AnimatedSprite.play("walk")
+	$AnimatedSprite.flip_h = false
+	
 func move_left():
 	girlVelocity.x = -SPEED
-	$Sprite.play("walk")
-	$Sprite.flip_h = true
+	$AnimatedSprite.play("walk")
+	$AnimatedSprite.flip_h = true
 	
 func _physics_process(delta):
 	if Input.is_action_pressed("right"):
@@ -28,10 +28,10 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("left"):
 		move_left()		
 	else:
-		$Sprite.play("idle") 
+		$AnimatedSprite.play("idle") 
 		
 	if not is_on_floor():
-		$Sprite.play("jump")
+		$AnimatedSprite.play("jump")
 		
 	girlVelocity.y += GRAVITY
 	
@@ -45,6 +45,14 @@ func _physics_process(delta):
 	
 	girlVelocity.x = lerp(girlVelocity.x,0,0.3)
 	
+	#r=12
+	#center = (100,100)
+	#midpoint-circle 
 	
 	
 	
+	
+
+
+func _on_fallzone_body_entered(body):
+	get_tree().change_scene("res://Level1.tscn")

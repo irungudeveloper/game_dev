@@ -1,0 +1,158 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/grassland_tileset/PNG/bg3.png" type="Texture" id=1]
+[ext_resource path="res://assets/grassland_tileset/PNG/bg2.png" type="Texture" id=2]
+[ext_resource path="res://assets/grassland_tileset/PNG/bg_cloud_C.png" type="Texture" id=3]
+[ext_resource path="res://assets/grassland_tileset/PNG/bg1.png" type="Texture" id=4]
+[ext_resource path="res://assets/grassland_tileset/PNG/bg4.png" type="Texture" id=5]
+[ext_resource path="res://assets/grassland_tileset/PNG/bg_cloud_A.png" type="Texture" id=6]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="sky"]
+position = Vector2( -18.3468, 18.3466 )
+scale = Vector2( 4.5, 6 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="cloud1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 158.9, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cloud1"]
+position = Vector2( 71.9187, 26.9696 )
+scale = Vector2( 4.16688, 2.79797 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="cloud2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 158.9, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="cloud2"]
+scale = Vector2( 4.16688, 2.79797 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="cloud3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 382.712, 0 )
+
+[node name="Sprite" type="Sprite" parent="cloud3"]
+position = Vector2( 501.292, 351.461 )
+scale = Vector2( 4.62147, 6.74068 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="cloud4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 382.712, 0 )
+
+[node name="Sprite" type="Sprite" parent="cloud4"]
+position = Vector2( 1482.65, 238.752 )
+scale = Vector2( 4.62147, 6.74068 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="farmountain" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1232, 0 )
+
+[node name="Sprite" type="Sprite" parent="farmountain"]
+position = Vector2( -12.3534, 398.063 )
+scale = Vector2( 3.5, 2 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="mountainrange" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1056, 0 )
+
+[node name="Sprite" type="Sprite" parent="mountainrange"]
+position = Vector2( -11.6194, 362.838 )
+scale = Vector2( 3.9, 3 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="grassland" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland"]
+position = Vector2( -11.9863, 350.117 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland2"]
+position = Vector2( -13.4543, 400.267 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland3"]
+position = Vector2( -15.3499, 461.628 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland4" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland4"]
+position = Vector2( -15.3501, 306.903 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland5" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland5"]
+position = Vector2( -15.3502, 374.175 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland6" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland6"]
+position = Vector2( -11.9866, 451.537 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="grassland7" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 960, 0 )
+
+[node name="Sprite" type="Sprite" parent="grassland7"]
+position = Vector2( -15.3501, 528.9 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
