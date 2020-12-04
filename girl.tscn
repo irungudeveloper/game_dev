@@ -7,7 +7,7 @@
 extents = Vector2( 34.4347, 70.591 )
 
 [node name="girl" type="KinematicBody2D"]
-position = Vector2( 0, -0.840881 )
+collision_mask = 31
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -21,3 +21,7 @@ animation = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -10.0908, 1.68179 )
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
