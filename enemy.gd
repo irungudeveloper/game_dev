@@ -10,11 +10,14 @@ func bounce():
 
 func _physics_process(delta):
 	
-	if not $floordetector.is_colliding() and detectfloor and is_on_floor() :
+	if  not $floordetector.is_colliding() and detectfloor and is_on_floor() :
 		direction = direction * -1
 		$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
 		$floordetector.position.x = $CollisionShape2D.shape.get_extents().x * direction
 
+	if is_on_wall():
+		pass
+	
 	enemyvelocity.y += 20
 	enemyvelocity = move_and_slide(enemyvelocity, Vector2.UP)
 	enemyvelocity.x = speed * direction
@@ -31,6 +34,7 @@ func _on_topcheck_body_entered(body):
 	speed = 0
 	set_collision_layer_bit(4,false)
 	set_collision_mask_bit(0,false)
+	$enemykilled.play()
 	
 	body.bounce()
 	

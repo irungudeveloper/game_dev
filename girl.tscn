@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://girl.gd" type="Script" id=1]
 [ext_resource path="res://girl_frames.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://assets/sounds/jump_sound.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/girl_level_1_walking_sound.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34.4347, 70.591 )
 
 [node name="girl" type="KinematicBody2D"]
+position = Vector2( -1, 0 )
 collision_mask = 31
 script = ExtResource( 1 )
 __meta__ = {
@@ -24,4 +27,12 @@ shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="jumpsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+pitch_scale = 1.25
+
+[node name="girlwalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

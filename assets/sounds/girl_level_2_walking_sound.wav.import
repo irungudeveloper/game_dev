@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/girl_level_2_walking_sound.wav-9155c0a63abb89128d4947daf25a2131.sample"
+
+[deps]
+
+source_file="res://assets/sounds/girl_level_2_walking_sound.wav"
+dest_files=[ "res://.import/girl_level_2_walking_sound.wav-9155c0a63abb89128d4947daf25a2131.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

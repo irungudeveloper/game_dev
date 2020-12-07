@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://slimenemy.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://enemy.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/enemy_killed_sound.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 90.1844, 28.0139 )
@@ -23,7 +24,7 @@ position = Vector2( 1.12247, 0 )
 scale = Vector2( 7.2996, 5.64596 )
 frames = ExtResource( 1 )
 animation = "walk"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -69,6 +70,11 @@ shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="enemykilled" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+pitch_scale = 0.5
 [connection signal="body_entered" from="topcheck" to="." method="_on_topcheck_body_entered"]
 [connection signal="body_entered" from="leftcheck" to="." method="_on_sidecheck_body_entered"]
 [connection signal="body_entered" from="leftcheck2" to="." method="_on_sidecheck_body_entered"]
